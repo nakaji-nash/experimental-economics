@@ -1,0 +1,110 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    アンケートA
+{% endblock %}
+
+{% block content %}
+
+<p>　</p>
+<p>　</p>
+<p>下記の各行の「選択肢A」と「選択肢B」、どちらの方が好ましいのか</p>
+<p>チェックを入れて選んでください</p>
+<p>　</p>
+<p>　</p>
+<P>（例題）</P>
+
+<table class="table table-striped" >
+    <tr align="center">
+        <th>選択肢A</th><th>  選択肢B</th>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で500円　</td>
+    </tr>
+</table>
+<p>　</p>
+<p>・Aを選んだ場合</p>
+<p>　　50%の確率で1000円を得られるが、50%の確率で何も得られない</p>
+<p>・Bを選んだ場合</p>
+<p>　　確実に500円を得られる</p>
+
+<p>　</p>
+<p>　</p>
+<table class="table table-striped" >
+    <tr align="center">
+        <th>選択肢A</th><th>  選択肢B</th><th></th><th>あなたの選択</th>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で0円　</td><td>　　</td><td>{% formfield player.question_0 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で50円　</td><td></td><td>{% formfield player.question_1 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で100円　</td><td></td><td>{% formfield player.question_2 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で150円　</td><td></td><td>{% formfield player.question_3 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で200円　</td><td></td><td>{% formfield player.question_4 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で250円　</td><td></td><td>{% formfield player.question_5 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で300円　</td><td></td><td>{% formfield player.question_6 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で350円　</td><td></td><td>{% formfield player.question_7 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で400円　</td><td></td><td>{% formfield player.question_8 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で450円　</td><td></td><td>{% formfield player.question_9 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で500円　</td><td></td><td>{% formfield player.question_10 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で550円　</td><td></td><td>{% formfield player.question_11 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で600円　</td><td></td><td>{% formfield player.question_12 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で650円　</td><td></td><td>{% formfield player.question_13 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で700円　</td><td></td><td>{% formfield player.question_14 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で750円　</td><td></td><td>{% formfield player.question_15 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で800円　</td><td></td><td>{% formfield player.question_16 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で850円　</td><td></td><td>{% formfield player.question_17 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で900円　</td><td></td><td>{% formfield player.question_18 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で950円　</td><td></td><td>{% formfield player.question_19 %}</td>
+    </tr>
+    <tr align="center">
+        <td>　50%の確率で0円、50%の確率で1000円を得る　</td><td>　100%の確率で1000円　</td><td></td><td>{% formfield player.question_20 %}</td>
+    </tr>
+
+
+
+
+</table>
+
+    {% next_button %}
+{% endblock %}
+
+

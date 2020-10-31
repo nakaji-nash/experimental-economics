@@ -1,0 +1,73 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    二期目の結果
+{% endblock %}
+
+{% block content %}
+<p>　</p>
+<p>第{{subsession.round_number}}ラウンド</p>
+<p>　</p>
+<table cellpadding="5" class="table table-striped" align="right">
+    <tr>
+        <th colspan="2">　　一期目の結果</th><th></th><th colspan="2">　　二期目の結果</th>
+    </tr>
+    <tr>
+        <td>　　　　あなた　　　　：</td>
+        <td>{% if group.investment_new_1 == 10 %}新製品に投資{% else %}なにもしない{% endif %}</td>
+        <td></td>
+        <td>　　　　あなた　　　　：</td>
+        <td>{% if group.investment_new_2 == 20 or group.investment_new_2 == 0 %}新製品に投資{% else %}なにもしない{% endif %}</td>
+    </tr>
+    <tr>
+        <td>　　　　相手　　　　　：</td>
+        <td>{% if group.investment_old_1 == 1 %}新製品に投資{% else %}既存製品に投資{% endif %}</td>
+        <td></td>
+        <td>　　　　相手　　　　　：</td>
+        <td>{% if group.investment_old_2 == 2 or group.investment_old_2 == 0 %}新製品に投資{% else %}既存製品に投資{% endif %}</td>
+    </tr>    
+    <tr>
+        <td>獲得ポイント（一期目）：</td>
+        <td>{{group.payoff_new_1}}</td>
+        <td></td>
+        <td>獲得ポイント（二期目）：</td>
+        <td>{{group.payoff_new_2}}</td>
+    </tr>
+        </tr>    
+    <tr>
+        <td>　</td>
+        <td>　</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>このラウンドの獲得ポイント：</td>
+        <td>{{player.payoff}}</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+    </tr>
+    <tr>
+        <td>　累計獲得ポイント　　：</td>
+        <td>{{participant.payoff}}</td>
+        <td>　</td>
+        <td>　</td>
+        <td>　</td>
+
+</table>
+
+
+
+
+</table>
+
+
+
+
+
+    {% next_button %}
+{% endblock %}
+
+

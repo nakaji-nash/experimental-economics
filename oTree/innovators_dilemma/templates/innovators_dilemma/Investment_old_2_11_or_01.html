@@ -1,0 +1,134 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    二期目の投資ステージ
+{% endblock %}
+
+{% block content %}
+
+
+<p>　</p>
+<p>第{{subsession.round_number}}ラウンド</p>
+<p>　</p>
+<p>あなたは「　{{player.role}}　」です</p>
+
+<p>　</p>
+
+    {% if subsession.expansion_or_shrink == 1 %}
+
+        <p>【　二期目のポイント表：拡大　】　</p>
+
+        {% if subsession.stage_type == 1 %}
+            {% if group.total_investments_1 == 11 %}
+
+                <img src="{% static "s1_O_r2E_11.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+
+            {% elif group.total_investments_1 == 1 %}
+
+                <img src="{% static "s1_O_r2E_01.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+            {% endif %}
+        
+        {% elif subsession.stage_type == 2 %}
+            {% if group.total_investments_1 == 11 %}
+
+                <img src="{% static "s2_O_r2E_11.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+
+            {% elif group.total_investments_1 == 1 %}
+
+                <img src="{% static "s2_O_r2E_01.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+            {% endif %}
+
+
+        {% elif subsession.stage_type == 3 %}
+            {% if group.total_investments_1 == 11 %}
+
+                <img src="{% static "s3_O_r2E_11.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+
+            {% elif group.total_investments_1 == 1 %}
+
+                <img src="{% static "s3_O_r2E_01.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+            {% endif %}
+
+    {% endif %}
+
+    {% elif subsession.expansion_or_shrink == 2 %}
+
+        <p>【　二期目のポイント表：縮小　】</p>
+
+        {% if subsession.stage_type == 1 %}
+            {% if group.total_investments_1 == 11 %}
+
+                <img src="{% static "s1_O_r2S_11.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+
+            {% elif group.total_investments_1 == 1 %}
+
+                <img src="{% static "s1_O_r2S_01.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+
+            {% endif %}
+
+        {% elif subsession.stage_type == 2 %}
+            {% if group.total_investments_1 == 11 %}
+
+                <img src="{% static "s2_O_r2S_11.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+
+            {% elif group.total_investments_1 == 1 %}
+
+                <img src="{% static "s2_O_r2S_01.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+            {% endif %}
+
+
+        {% elif subsession.stage_type == 3 %}
+            {% if group.total_investments_1 == 11 %}
+
+                <img src="{% static "s3_O_r2S_11.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+
+            {% elif group.total_investments_1 == 1 %}
+
+                <img src="{% static "s3_O_r2S_01.jpg" %}" width="400" />
+                <P>　</P>
+                {% formfield group.investment_old_2_11_or_01 %}
+
+
+            {% endif %}
+
+        {% endif %}
+        
+    {% endif %}
+
+
+    {% next_button %}
+{% endblock %}

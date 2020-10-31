@@ -1,0 +1,51 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    一期目の結果
+{% endblock %}
+
+{% block content %}
+
+<p>　</p>
+<p>第{{subsession.round_number}}ラウンド</p>
+<p>　</p>
+<table cellpadding="5" class="table table-striped" align="right">
+    <tr>
+        <th colspan="2">一期目の結果</th>
+    </tr>
+    <tr>
+        <td>　　　　あなた　　　　：</td>
+        <td>{% if group.investment_new_1 == 10 %}新製品に投資{% else %}なにもしない{% endif %}</td>
+    </tr>
+    <tr>
+        <td>　　　　相手　　　　　：</td>
+        <td>{% if group.investment_old_1 == 1 %}新製品に投資{% else %}既存製品に投資{% endif %}</td>
+    </tr>    
+    <tr>
+        <td>　　獲得ポイント　　　：</td>
+        <td>{{group.payoff_new_1}}</td>
+    </tr>
+        </tr>    
+    <tr>
+        <td>このラウンドの獲得ポイント：</td>
+        <td>{{player.payoff}}</td>
+    </tr>
+    <tr>
+        <td>　</td>
+        <td>　</td>
+    </tr>
+    <tr>
+        <td>　累計獲得ポイント　　：</td>
+        <td>{{participant.payoff}}</td>
+    </tr>
+</table>
+
+
+
+
+
+    {% next_button %}
+{% endblock %}
+
+

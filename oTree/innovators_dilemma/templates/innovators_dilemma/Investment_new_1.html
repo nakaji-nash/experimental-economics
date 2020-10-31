@@ -1,0 +1,67 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    一期目の投資ステージ
+{% endblock %}
+
+{% block content %}
+<p>　</p>
+<p>第{{subsession.round_number}}ラウンド</p>
+<p>　</p>
+<p>あなたは「　{{player.role}}　」です</p>
+<p>下の表をもとに新製品に投資をするかどうか選択してください</p>
+
+<p>　</p>
+<p>【　一期目のポイント表　】</p>
+
+    <img src="{% static "s1_N_r1.jpg" %}" width="400"/>
+
+<p>　</p>
+<hr>
+
+<P>【　二期目の予想ポイント表　】</P>
+<p></p>
+<table>
+    <tr>
+        <td>一期目に<br>・あなた：新製品に投資<br>・相手　：新製品に投資　　の場合</td><td>　</td><td>一期目に<br>・あなた：新製品に投資<br>・相手　：既存製品に投資　　の場合</td>
+    </tr>
+    <tr>
+        <td>
+            {% if subsession.stage_type == 1 %}<img src="{% static "s1_N_r1_11.jpg" %}" width="400px" />{% elif subsession.stage_type == 2 %}<img src="{% static "s2_N_r1_11.jpg" %}" width="400px" />{% elif subsession.stage_type == 3 %}<img src="{% static "s3_N_r1_11.jpg" %}" width="400px" />{% endif %}</td>
+            <td>　</td>
+            <td>{% if subsession.stage_type == 1 %}<img src="{% static "s1_N_r1_10.jpg" %}" width="400px" />{% elif subsession.stage_type == 2 %}<img src="{% static "s2_N_r1_10.jpg" %}" width="400px" />{% elif subsession.stage_type == 3 %}<img src="{% static "s3_N_r1_10.jpg" %}" width="400px" />{% endif %}</td>
+    </tr>
+    <tr>
+        <td>　</td><td>　</td><td>　</td>
+    </tr>
+    <tr>
+        <td>一期目に<br>・あなた：なにもしない<br>・相手　：新製品に投資　　の場合</td><td>　</td><td>一期目に<br>・あなた：なにもしない<br>・相手　：既存製品に投資　　の場合</td>
+    </tr>
+    <tr>
+        <td>{% if subsession.stage_type == 1 %}<img src="{% static "s1_N_r1_01.jpg" %}" width="400px" />{% elif subsession.stage_type == 2 %}<img src="{% static "s2_N_r1_01.jpg" %}" width="400px" />{% elif subsession.stage_type == 3 %}<img src="{% static "s3_N_r1_01.jpg" %}" width="400px" />{% endif %}</td>
+        <td>　</td>
+        <td>{% if subsession.stage_type == 1 %}<img src="{% static "s1_N_r1_00.jpg" %}" width="400px" />{% elif subsession.stage_type == 2 %}<img src="{% static "s2_N_r1_00.jpg" %}" width="400px" />{% elif subsession.stage_type == 3 %}<img src="{% static "s3_N_r1_00.jpg" %}" width="400px" />{% endif %}</td>
+    </tr>
+
+
+
+
+</table>
+
+
+
+
+<p></p>
+<p></p>
+
+
+{% formfield group.investment_new_1 %}
+
+<p></p>
+
+
+    {% next_button %}
+{% endblock %}
+
+

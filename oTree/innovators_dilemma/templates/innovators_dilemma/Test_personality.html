@@ -1,0 +1,100 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    アンケートB
+{% endblock %}
+
+{% block content %}
+
+<p>　</p>
+<p>　</p>
+<p>・このアンケートでは、あなたはランダムに選ばれた誰かとペアになっていると想像してください。<br>
+    　その相手とは、以前にあったことも、これから会うこともありません。</p>
+<p>・これからあなたとその相手にはそれぞれA・B・Cの三つの選択肢のうち一つを選んでもらいます。<br>
+    　そこであなたの選択の結果、あなた自身と相手のそれぞれが得るポイントが決定します。<br>
+    　同様に、相手の選択の結果、あなた自身と相手のそれぞれが得るポイントが決定します。</p>
+<p>・ポイントには価値があります。ポイントが多ければ多いほど良いわけです。それは相手に取っても同様です。</p>
+
+<p>　</p>
+<P></P>
+<p>（例題01）</p>
+<p>　A　あなたが得るポイント：500　相手が得るポイント：100</p>
+<p>　B　あなたが得るポイント：500　相手が得るポイント；500</p>
+<p>　C　あなたが得るポイント：550　相手が得るポイント：300 </p>
+
+<p>　</p>
+<p>　　この例では、もしあなたがAを選んだら、あなたは500ポイントを受け取り、相手は100ポイントを受け取ります。<br>
+    　　Bを選ぶと、あなたは500ポイント、相手は500ポイント受け取ります。<br>
+    　　Cを選ぶと、あなたは550ポイント、相手は300ポイント受け取ります。</p>
+<p>　　このように、あなたの選択によって、あなた自身と相手が受け取るポイントが決定します。</p>
+
+<p>　</p>
+
+<p>　　以上の例に従って、下記の質問にお答えください。</p>
+
+<p></p>
+<table class="table table-striped">
+    <tr>
+        <th>各設問ごとに、三つの選択肢からあなたが最も好ましいと思うものを一つ選んでください</th>
+    </tr>
+    <tr><td>　</td></tr>
+    <tr>
+        <td>
+            {% formfield player.question_p_1 %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {% formfield player.question_p_2 %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {% formfield player.question_p_3 %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {% formfield player.question_p_4 %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {% formfield player.question_p_5 %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {% formfield player.question_p_6 %}
+        </td>
+    </tr>
+    　  <tr>
+        <td>
+            {% formfield player.question_p_7 %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {% formfield player.question_p_8 %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {% formfield player.question_p_9 %}
+        </td>
+    </tr>
+
+
+
+
+
+
+
+
+</table>
+
+    {% next_button %}
+{% endblock %}
+
+

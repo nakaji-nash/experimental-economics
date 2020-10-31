@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    以上で実験の説明・確認テストは終了です。
+{% endblock %}
+
+{% block content %}
+
+<br>
+<p>次のページにすすんでください。</p>
+<p>相手が決まり次第、ゲームが始まります。</p>
+<br>
+    {% next_button %}
+
+{% endblock %}

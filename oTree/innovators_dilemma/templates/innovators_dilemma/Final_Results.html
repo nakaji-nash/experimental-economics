@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    最終結果発表
+{% endblock %}
+
+{% block content %}
+
+    
+    <p>　</p>
+    <p>　</p>
+    <p>以上でゲームは終了です。</p>
+    <p>　</p>
+    <p>あなたの最終獲得ポイントは<br>「　{{participant.payoff}}　」<br>です。</p>
+    <p>　</p>
+    <p>最後に、アンケートをお願いします。</p>
+
+
+
+    {% next_button %}
+{% endblock %}
+
+

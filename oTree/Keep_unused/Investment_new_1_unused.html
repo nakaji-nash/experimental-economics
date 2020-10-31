@@ -1,0 +1,165 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    一期目の投資ステージ
+{% endblock %}
+
+{% block content %}
+<p>　</p>
+<p>あなたは「　{{player.role}}　」です</p>
+<p>下の表をもとに新製品に投資をするかどうか選択してください</p>
+
+
+<!--
+<p>　</p>
+<p>「一期目のポイント表」</p>
+
+<table border="1"  cellpadding="10">
+    <tr align="center">
+        <td>あなた / 相手</td>
+        <td>新製品に投資</td>
+        <td>既存製品に投資</td>
+    </tr>
+    <tr align="center">
+        <td>新製品に投資</td>
+        <td>（-22、31）</td>
+        <td>（-17、22）</td>
+    </tr>
+    <tr align="center">
+        <td>なにもしない</td>
+        <td>（0、117）</td>
+        <td>（0、25）</td>
+    </tr>
+</table>
+-->
+
+<p></p>
+
+
+<!---
+
+{% if Constants.stage_type == 1 %}
+
+    <p>「予想：二期目のポイント表」</p>
+    <table cellpadding="10">
+        <tr align="left">
+            <td><p>一期目に</p><li>あなた：「新製品に投資」</li><li>相手　：「新製品に投資」　　の場合</li></td>
+            <td></td>
+            <td><p>一期目に</p><li>あなた：「新製品に投資」</li><li>相手　：「既存製品に投資」　　の場合</li></td>
+        </tr>
+        <tr align="center">
+            <td><table border="1"  cellpadding="10">
+                    <tr align="center">
+                        <td>あなた / 相手</td>
+                        <td>新製品に投資</td>
+                        <td bgcolor="#cccccc">　　　　　　　</td>
+                    </tr>
+                    <tr align="center">
+                        <td>新製品に投資</td>
+                        <td><p>30%：(65、158)</p><p>70%：(19、45)</p></td>
+                        <td bgcolor="#cccccc">　</td>
+                    </tr>
+                    <tr align="center">
+                        <td bgcolor="#cccccc">　　　　　 　</td>
+                        <td bgcolor="#cccccc">　</td>
+                        <td bgcolor="#cccccc">　</td>
+                    </tr>
+                </table>
+            </td>
+            <td></td>
+            <td><table border="1"  cellpadding="10">
+                    <tr align="center">
+                        <td>あなた / 相手</td>
+                        <td>新製品に投資</td>
+                        <td>既存製品に投資</td>
+                    </tr>
+                    <tr align="center">
+                        <td>新製品に投資</td>
+                        <td><p>30%：(65、91)</p><p>70%：(112、10)</p></td>
+                        <td><p>30%：(19、26)</p><p>70%：(32、10)</p></td>
+                    </tr>
+                    <tr align="center">
+                        <td bgcolor="#cccccc">　　　　　</td>
+                        <td bgcolor="#cccccc">　</td>
+                        <td bgcolor="#cccccc">　</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td> 
+            <td></td>
+        </tr>
+        <tr>
+            <td><p>一期目に</p><li>あなた：「なにもしない」</li><li>相手　：「新製品に投資」　　の場合</li>
+            </td>
+            <td></td>
+            <td><p>一期目に</p><li>あなた：「なにもしない」</li><li>相手　：「既存製品に投資」　　の場合</li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="1"  cellpadding="10">
+                <tr align="center">
+                    <td>あなた / 相手</td>
+                    <td>新製品に投資</td>
+                    <td bgcolor="#cccccc">　　　　　　　</td>
+                </tr>
+                <tr align="center">
+                    <td>新製品に投資</td>
+                    <td><p>30%：(-2、157)</p>70%：(-50、45)</p></td>
+                    <td bgcolor="#cccccc">　</td>
+                </tr>
+                <tr align="center">
+                    <td>なにもしない</td>
+                    <td><p>30%：(0、415)</p><p>70%：(0、118)</p></td>
+                    <td bgcolor="#cccccc">　</td>
+                </tr>
+            </table></td>
+            <td></td>
+            <td>            
+                <table border="1"  cellpadding="10">
+                <tr align="center">
+                    <td>あなた / 相手</td>
+                    <td>新製品に投資</td>
+                    <td>既存製品に投資</td>
+                </tr>
+                <tr align="center">
+                    <td>新製品に投資</td>
+                    <td><p>30%：(-2、91)</p><p>70%：(-50、26)</p></td>
+                    <td><p>30%：(45、10)</p><p>70%：(13、10)</p></td>
+                </tr>
+                <tr align="center">
+                    <td>なにもしない</td>
+                    <td><p>30%：(0、348)</p><p>70%：(0、25)</p></td>
+                    <td><p>30%：(0、99)</p><p>70%：(0、25)</p></td>
+                </tr>
+            </table></td>
+        </tr>
+                
+                
+
+                <p></p>
+                <p></p>
+
+
+
+{% endif %}
+-->
+
+
+<p></p>
+<p></p>
+
+
+{% formfield group.investment_new_1 %}
+
+<p></p>
+
+
+    {% next_button %}
+{% endblock %}
+
+

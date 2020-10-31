@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+{% endblock %}
+
+
+{% block content %}
+<br>
+<p>第{{subsession.round_number}}ラウンド</p>
+<br>
+<p>あなたの役割は　「　{{player.role}}　」　です。</p>
+
+
+
+
+    {% next_button %}
+{% endblock %}
+
+
