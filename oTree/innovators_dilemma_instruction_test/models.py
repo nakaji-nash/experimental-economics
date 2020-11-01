@@ -85,7 +85,6 @@ class Player(BasePlayer):
     test_5 = models.BooleanField(
         label="解答",
         choices =[
-            [False,"50"],
             [False,"100"],
             [False,"150"],
             [False,"200"],
