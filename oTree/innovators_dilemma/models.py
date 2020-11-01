@@ -134,7 +134,7 @@ class Group(BaseGroup):
     
     #投資したかどうか。
     investment_new_1 = models.IntegerField(
-        label="あなたは新製品に投資を行いますか？",
+        label="一期目から、あなたは新製品に投資を行いますか？",
         choices=[
             [10,"新製品に投資する"],
             [0,"なにもしない"],
@@ -142,7 +142,7 @@ class Group(BaseGroup):
         widget=widgets.RadioSelect,
     ) 
     investment_new_2 = models.IntegerField(
-        label="あなたは新製品に投資を行いますか？",
+        label="二期目に、あなたは新製品に投資を行いますか？",
         choices=[
             [20,"新製品に投資する"],
             [0,"なにもしない"],
@@ -158,7 +158,7 @@ class Group(BaseGroup):
         widget=widgets.RadioSelect,
     )
     investment_old_1 = models.IntegerField(
-        label="あなたは新製品に投資を行いますか？",
+        label="一期目から、あなたは新製品に投資を行いますか？",
         choices=[
             [1,"新製品に投資する"],
             [0,"既存製品に投資する"],
@@ -166,7 +166,7 @@ class Group(BaseGroup):
         widget=widgets.RadioSelect,
     )
     investment_old_2 = models.IntegerField(
-            label="あなたは新製品に投資を行いますか？",
+            label="二期目に、あなたは新製品に投資を行いますか？",
         choices=[
             [2,"新製品に投資する"],
             [0,"既存製品に投資する"],
