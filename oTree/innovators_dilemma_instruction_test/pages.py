@@ -51,7 +51,7 @@ class End_instruction(Page):
 
 
 page_sequence = [
-    inst_Investment_old_1,
+    #inst_Investment_old_1,
     Notes,
     Instruction,
     Test,
