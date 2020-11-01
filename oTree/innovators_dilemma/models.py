@@ -491,6 +491,7 @@ class Group(BaseGroup):
 
 
 class Player(BasePlayer):
+    user_id = models.StringField() #被験者IDの記録
     stage_type_random = models.IntegerField()
 
     investment_new_1 = models.IntegerField() 
@@ -499,6 +500,7 @@ class Player(BasePlayer):
     investment_old_1 = models.IntegerField()
     investment_old_2 = models.IntegerField()
     investment_old_2_11_or_01 = models.IntegerField()
+
 
 
     

@@ -6,7 +6,6 @@ class role_round(Page):
     pass
 
 
-
 class Investment_new_1(Page):
     def is_displayed(self):
         return self.player.id_in_group == 1 and self.round_number % 2 == 0 or self.player.id_in_group == 2 and self.round_number % 2 == 1
@@ -97,8 +96,16 @@ class Test_personality(Page):
     def is_displayed(self):
         return self.round_number == Constants.num_rounds
 
-
+#実験の注意点
 class Start(Page):
+    def is_displayed(self):
+        return self.round_number == 1
+
+#被験者IDの入力画面
+class Enter_id(Page):
+    form_model = "player"
+    form_fields = ["user_id"]
+
     def is_displayed(self):
         return self.round_number == 1
 
@@ -129,6 +136,7 @@ class Final_Results(Page):
 page_sequence = [  #ページの順番
     FirstWaitPage,  #到着順にグループ化していく
     Start,
+    Enter_id,
     role_round,
     Investment_new_1,
     Investment_old_1,
