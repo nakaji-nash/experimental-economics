@@ -185,6 +185,12 @@ class Final_Results(Page):
         return self.round_number == Constants.num_rounds
 
 
+#最後のページ、報酬の連絡
+class End_message(Page):
+    def is_displayed(self):
+        return self.round_number == Constants.num_rounds
+
+
 page_sequence = [  #ページの順番
     FirstWaitPage,  #到着順にグループ化していく
     Start,
@@ -206,4 +212,5 @@ page_sequence = [  #ページの順番
     Final_Results,
     Test_risk,
     Test_personality,
+    End_message,
     ]
