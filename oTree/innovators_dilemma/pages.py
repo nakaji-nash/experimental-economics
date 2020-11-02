@@ -12,6 +12,15 @@ class Investment_new_1(Page):
 
     form_model = "group"
     form_fields = ["investment_new_1"]  #Investment_new_1ステージで、Playerのinvestment_new_1を入力してもらう
+    timeout_seconds = 60
+
+        def before_next_page(self):
+            if self.timeout_happened:
+                if self.player.stage_type_random > 50 :
+                    self.player.investment_new_1 = 10
+                else :
+                    self.player.investment_new_1 = 0
+                
 
 class Investment_old_1(Page):
     def is_displayed(self):
@@ -19,6 +28,15 @@ class Investment_old_1(Page):
 
     form_model = "group"
     form_fields = ["investment_old_1"]
+    timeout_seconds = 60
+
+        def before_next_page(self):
+            if self.timeout_happened:
+                if self.player.stage_type_random > 50 :
+                    self.player.investment_old_1 = 1
+                else :
+                    self.player.investment_old_1 = 0
+
 
 class Investment_new_2(Page):
     def is_displayed(self):
@@ -26,6 +44,15 @@ class Investment_new_2(Page):
 
     form_model = "group"
     form_fields = ["investment_new_2"]
+    timeout_seconds = 45
+
+        def before_next_page(self):
+            if self.timeout_happened:
+                if self.player.stage_type_random > 50 :
+                    self.player.investment_new_2 = 20
+                else :
+                    self.player.investment_new_2 = 0
+
 
 class Investment_old_2(Page):
     def is_displayed(self):
@@ -33,6 +60,15 @@ class Investment_old_2(Page):
 
     form_model = "group"
     form_fields = ["investment_old_2"]
+    timeout_seconds = 45
+
+        def before_next_page(self):
+            if self.timeout_happened:
+                if self.player.stage_type_random > 50 :
+                    self.player.investment_old_2 = 2
+                else :
+                    self.player.investment_old_2 = 0
+
 
 class Investment_new_2_11_or_10(Page):
     def is_displayed(self):
@@ -40,6 +76,12 @@ class Investment_new_2_11_or_10(Page):
 
     form_model = "group"
     form_fields = ["investment_new_2_11_or_10"]
+    timeout_seconds = 45
+
+        def before_next_page(self):
+            if self.timeout_happened:
+                self.player.investment_new_11_or_10 = 3000
+
 
 class Investment_old_2_11_or_01(Page):
     def is_displayed(self):
@@ -47,25 +89,36 @@ class Investment_old_2_11_or_01(Page):
     
     form_model = "group"
     form_fields = ["investment_old_2_11_or_01"]
+    timeout_seconds = 45
+
+        def before_next_page(self):
+            if self.timeout_happened:
+                self.player.investment_old_11_or_01 = 3000
 
 
 
 class Results_new_1(Page):
     def is_displayed(self):
         return self.player.id_in_group == 1 and self.round_number % 2 == 0 or self.player.id_in_group == 2 and self.round_number % 2 == 1
+    timeout_seconds = 30
 
 class Results_old_1(Page):
     def is_displayed(self):
         return self.player.id_in_group == 2 and self.round_number % 2 == 0 or self.player.id_in_group == 1 and self.round_number % 2 == 1
+    timeout_seconds = 30
+
+
 #既存企業
 class Results_new_2(Page):
     def is_displayed(self):
         return self.player.id_in_group == 1 and self.round_number % 2 == 0 or self.player.id_in_group == 2 and self.round_number % 2 == 1
+    timeout_seconds = 30
 
 class Results_old_2(Page):
     def is_displayed(self):
         return self.player.id_in_group == 2 and self.round_number % 2 == 0 or self.player.id_in_group == 1 and self.round_number % 2 == 1
 #既存企業
+    timeout_seconds = 30
 
 
 #リスク選好テスト
@@ -108,7 +161,6 @@ class Enter_id(Page):
 
     def is_displayed(self):
         return self.round_number == 1
-
 #待機&計算のページ
 class FirstWaitPage(WaitPage):
     group_by_arrival_time = True #到着順にグループ化していく
