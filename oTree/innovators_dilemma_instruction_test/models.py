@@ -91,9 +91,12 @@ class Player(BasePlayer):
             [False,"200"],
             [False,"250"],
             [False,"300"],
-            [True,"400"],
+            [False,"400"],
             [False,"500"],
             [False,"600"],
+            [True,"700"],
+            [False,"800"],
+            [False,"900"],
             [False,"1000"],
             [False,"わからない"],
         ]
