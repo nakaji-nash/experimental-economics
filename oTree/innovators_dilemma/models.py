@@ -57,8 +57,6 @@ class Subsession(BaseSubsession):
             self.stage_type = 3
 
 
-
-
         
 
 #ラウンドごとに数値をリセット
