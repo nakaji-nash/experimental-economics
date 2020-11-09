@@ -12,7 +12,7 @@ class Investment_new_1(Page):
 
     form_model = "group"
     form_fields = ["investment_new_1"]  #Investment_new_1ステージで、Playerのinvestment_new_1を入力してもらう
-    timeout_seconds = 60
+    timeout_seconds = 120
 
     def before_next_page(self):
             if self.timeout_happened:
