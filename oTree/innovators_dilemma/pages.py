@@ -80,7 +80,7 @@ class Investment_new_2_11_or_10(Page):
 
     def before_next_page(self):
             if self.timeout_happened:
-                self.group.investment_new_11_or_10 = 3000
+                self.group.investment_new_2_11_or_10 = 3000
 
 
 class Investment_old_2_11_or_01(Page):
@@ -93,7 +93,7 @@ class Investment_old_2_11_or_01(Page):
 
     def before_next_page(self):
             if self.timeout_happened:
-                self.group.investment_old_11_or_01 = 3000
+                self.group.investment_old_2_11_or_01 = 3000
 
 
 
